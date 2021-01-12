@@ -1,0 +1,10 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ayatana
+
+Name: Ayatana common
+Description: Ayatana common library
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -layatana-common
+Cflags:  -I${includedir}
