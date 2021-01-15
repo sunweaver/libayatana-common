@@ -4,6 +4,9 @@ cmake_minimum_required (VERSION 2.8.9)
 set(PROJECT_VERSION "0.8.1")
 set(PACKAGE ${CMAKE_PROJECT_NAME})
 
+set(API_VERSION 0)
+set(ABI_VERSION 0)
+
 # Options
 option(DISABLE_TESTS "Disable tests" off)
 
