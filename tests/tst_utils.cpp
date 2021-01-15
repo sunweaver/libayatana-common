@@ -35,12 +35,14 @@ public:
    }
 };
 
+#ifdef HAS_URLDISPATCHER
 TEST_F(XdgCurrentDesktopUtilsTest, isLomiri)
 {
     EXPECT_FALSE(is_lomiri());
     setenv("XDG_CURRENT_DESKTOP", "Lomiri", 1);
     EXPECT_TRUE(is_lomiri());
 }
+#endif
 
 TEST_F(XdgCurrentDesktopUtilsTest, isGnome)
 {
