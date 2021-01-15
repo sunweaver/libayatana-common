@@ -16,6 +16,13 @@ set(PUBLIC_HEADERS
     utils.h
 )
 
+set_target_properties(ayatana-common
+    PROPERTIES
+    VERSION ${API_VERSION}.0.0
+    SOVERSION ${ABI_VERSION}
+    PUBLIC_HEADER "${PUBLIC_HEADERS}"
+)
+
 configure_file(libayatana-common.pc.in ${CMAKE_CURRENT_BINARY_DIR}/libayatana-common.pc @ONLY)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libayatana-common.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
