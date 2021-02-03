@@ -19,7 +19,7 @@
 #include <string.h>
 
 #ifdef HAS_URLDISPATCHER
-# include <url-dispatcher.h>
+# include <lomiri-url-dispatcher.h>
 #endif
 
 // TODO: make case insensitive
@@ -136,10 +136,10 @@ open_url (const gchar * url)
   if (is_lomiri())
   {
 #ifdef HAS_URLDISPATCHER
-    url_dispatch_send("settings:///system/battery", NULL, NULL);
+    lomiri_url_dispatch_send(url, NULL, NULL);
     return TRUE;
 #else
-    g_warning("Built without url-dispatcher, is not able to open url");
+    g_warning("Built without url-dispatcher, not able to open URL '%s'", url);
 #endif
   }
 
