@@ -1,0 +1,41 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libayatana-common
+Upstream-Contact: Marius Gripsgard <marius@ubports.com>
+                  Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+Source: https://github.com/AyatanaIndicators/libayatana-common
+
+Files: src/utils.c
+ src/utils.h
+ tests/tst_utils.cpp
+Copyright: 2021, Marius Gripsgard <marius@ubports.com>
+License: GPL-3
+
+Files: CMakeLists.txt
+ src/CMakeLists.txt
+ src/libayatana-common.pc.in
+ tests/CMakeLists.txt
+Copyright: Marius Gripsgard <marius@ubports.com>
+License: GPL-3
+Comment:
+ No license headers in these files. Assuming same copyright holdership
+ and license as found in the other code files.
+
+Files: debian/*
+Copyright: 2021, Mike Gabriel <mike.gabriel@das-netzwerkteam.de>
+License: GPL-3
+
+License: GPL-3
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 3 of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
