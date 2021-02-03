@@ -26,7 +26,7 @@ include_directories (${GLIB_INCLUDE_DIRS})
 
 pkg_check_modules(
   URLDISPATCHER
-  url-dispatcher-1>=1
+  lomiri-url-dispatcher>=0
 )
 include_directories(${URLDISPATCHER_INCLUDE_DIRS})
 
