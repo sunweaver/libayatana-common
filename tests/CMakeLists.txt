@@ -14,5 +14,6 @@ target_link_libraries(tst_utils
 
     ${GTEST_LIBRARIES}
     ${GTEST_BOTH_LIBRARIES}
+    ${GMOCK_LIBRARIES}
 )
 add_test(TstUtils tst_utils)
