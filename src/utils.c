@@ -82,6 +82,12 @@ is_pantheon ()
   return is_xdg_current_desktop(DESKTOP_PANTHEON);
 }
 
+gboolean
+is_budgie ()
+{
+  return is_xdg_current_desktop(DESKTOP_BUDGIE);
+}
+
 // Bit of a hacky way? should use xdg open
 char *
 find_browser ()

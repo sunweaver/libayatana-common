@@ -25,6 +25,7 @@
 #define DESKTOP_GNOME  "GNOME"
 #define DESKTOP_XFCE   "XFCE"
 #define DESKTOP_PANTHEON  "PANTHEON"
+#define DESKTOP_BUDGIE  "Budgie"
 
 gboolean is_lomiri();
 gboolean is_unity();
@@ -32,6 +33,7 @@ gboolean is_gnome();
 gboolean is_mate();
 gboolean is_xfce();
 gboolean is_pantheon();
+gboolean is_budgie();
 
 gboolean execute_command(const gchar * cmd);
 gboolean open_url(const gchar * url);

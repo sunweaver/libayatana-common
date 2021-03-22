@@ -72,3 +72,9 @@ TEST_F(XdgCurrentDesktopUtilsTest, isPantheon)
     setenv("XDG_CURRENT_DESKTOP", "PANTHEON", 1);
     EXPECT_TRUE(is_pantheon());
 }
+TEST_F(XdgCurrentDesktopUtilsTest, isBudgie)
+{
+    EXPECT_FALSE(is_budgie());
+    setenv("XDG_CURRENT_DESKTOP", "Budgie:GNOME", 1);
+    EXPECT_TRUE(is_budgie());
+}
