@@ -22,15 +22,15 @@ extern "C" {
 }
 
 class XdgCurrentDesktopUtilsTest : public ::testing::Test
-{ 
-public: 
-   XdgCurrentDesktopUtilsTest() {} 
+{
+public:
+   XdgCurrentDesktopUtilsTest() {}
 
-   void SetUp() { 
+   void SetUp() {
        unsetenv("XDG_CURRENT_DESKTOP");
    }
 
-   void TearDown() { 
+   void TearDown() {
        unsetenv("XDG_CURRENT_DESKTOP");
    }
 };
