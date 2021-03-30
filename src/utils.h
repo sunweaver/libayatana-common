@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 Marius Gripsgard <marius@ubports.com>
+ * Copyright 2021 Robert Tari <robert@tari.in>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 3, as published
@@ -25,6 +26,7 @@
 #define DESKTOP_GNOME  "GNOME"
 #define DESKTOP_XFCE   "XFCE"
 #define DESKTOP_PANTHEON  "PANTHEON"
+#define DESKTOP_BUDGIE  "Budgie"
 
 gboolean is_lomiri();
 gboolean is_unity();
@@ -32,6 +34,7 @@ gboolean is_gnome();
 gboolean is_mate();
 gboolean is_xfce();
 gboolean is_pantheon();
+gboolean is_budgie();
 
 gboolean execute_command(const gchar * cmd);
 gboolean open_url(const gchar * url);

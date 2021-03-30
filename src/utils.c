@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 Marius Gripsgard <marius@ubports.com>
+ * Copyright 2021 Robert Tari <robert@tari.in>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 3, as published
@@ -80,6 +81,12 @@ gboolean
 is_pantheon ()
 {
   return is_xdg_current_desktop(DESKTOP_PANTHEON);
+}
+
+gboolean
+is_budgie ()
+{
+  return is_xdg_current_desktop(DESKTOP_BUDGIE);
 }
 
 // Bit of a hacky way? should use xdg open

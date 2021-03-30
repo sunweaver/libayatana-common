@@ -1,5 +1,6 @@
 /*
  * Copyright 2021 Marius Gripsgard <marius@ubports.com>
+ * Copyright 2021 Robert Tari <robert@tari.in>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License version 3, as published
@@ -22,15 +23,15 @@ extern "C" {
 }
 
 class XdgCurrentDesktopUtilsTest : public ::testing::Test
-{ 
-public: 
-   XdgCurrentDesktopUtilsTest() {} 
+{
+public:
+   XdgCurrentDesktopUtilsTest() {}
 
-   void SetUp() { 
+   void SetUp() {
        unsetenv("XDG_CURRENT_DESKTOP");
    }
 
-   void TearDown() { 
+   void TearDown() {
        unsetenv("XDG_CURRENT_DESKTOP");
    }
 };
@@ -71,4 +72,10 @@ TEST_F(XdgCurrentDesktopUtilsTest, isPantheon)
     EXPECT_FALSE(is_pantheon());
     setenv("XDG_CURRENT_DESKTOP", "PANTHEON", 1);
     EXPECT_TRUE(is_pantheon());
+}
+TEST_F(XdgCurrentDesktopUtilsTest, isBudgie)
+{
+    EXPECT_FALSE(is_budgie());
+    setenv("XDG_CURRENT_DESKTOP", "Budgie:GNOME", 1);
+    EXPECT_TRUE(is_budgie());
 }
