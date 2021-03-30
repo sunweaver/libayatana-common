@@ -1,0 +1,137 @@
+2021-03-30 16:05:55 +0200 Mike Gabriel
+
+	* release 0.9.0 (HEAD -> master, tag: 0.9.0)
+
+2021-03-30 15:57:06 +0200 Mike Gabriel (8b8c30f)
+
+	* Merge branch 'tari01-pr/add-budgie'
+
+2021-03-22 10:47:31 +0100 Robert Tari (18179a1)
+
+	* Add us to the copyright headers
+
+2021-03-22 10:45:38 +0100 Robert Tari (cd6d7b2)
+
+	* Add Budgie desktop support
+
+2021-03-22 10:43:31 +0100 Robert Tari (27d8dca)
+
+	* Whitespace fix
+
+2021-03-30 15:55:43 +0200 Mike Gabriel (73bd95f)
+
+	* Merge branch 'tari01-pr/fix-required-cmake-version'
+
+2021-02-08 10:23:06 +0100 Robert Tari (5bf1dcb)
+
+	* Fix minimum required CMake version warning
+
+2021-03-30 15:52:26 +0200 Mike Gabriel (4cba471)
+
+	* Merge branch 'revert-1-pr/no-lomiri-tests-without-url-dispatcher'
+
+2021-02-03 14:50:34 +0100 Marius Gripsgard (bc3517b)
+
+	* Revert "tests/: Don't run Lomiri related unit test, if library
+          hasn't been bu…"
+
+2021-02-03 11:58:16 +0100 Robert Tari (e3cb90d)
+
+	* Merge branch 'sunweaver-pr/port-to-lomiri-url-dispatcher'
+
+2021-02-03 11:11:17 +0100 Mike Gabriel (7d1d251)
+
+	* Port from URL Dispatcher to Lomiri URL Dispatcher.
+
+2021-02-03 11:39:26 +0100 Robert Tari (e679711)
+
+	* Merge branch 'sunweaver-pr/deb-packaging'
+
+2021-02-03 11:36:46 +0100 Robert Tari (e436dff)
+
+	* Merge branch 'sunweaver-pr/add-copying-file'
+
+2021-01-15 15:15:52 +0100 Mike Gabriel (0954c9d)
+
+	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename.
+
+2021-01-15 15:12:02 +0100 Mike Gabriel (d16f5df)
+
+	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries().
+
+2021-01-15 15:06:55 +0100 Mike Gabriel (e4bbb7d)
+
+	* tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher.
+
+2021-02-03 11:33:43 +0100 Robert Tari (00d165c)
+
+	* Merge branch 'sunweaver-pr/set-api-abi-version'
+
+2021-01-15 15:12:02 +0100 Mike Gabriel (f4699d4)
+
+	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries().
+
+2021-01-15 15:06:55 +0100 Mike Gabriel (792fe77)
+
+	* tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher.
+
+2021-02-03 11:30:49 +0100 Robert Tari (1756ee8)
+
+	* Merge branch 'sunweaver-pr/gmock-must-be-in-link-libraries'
+
+2021-01-15 15:06:55 +0100 Mike Gabriel (1206219)
+
+	* tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher.
+
+2021-02-03 11:26:28 +0100 Robert Tari (d869125)
+
+	* Merge branch 'sunweaver-pr/no-lomiri-tests-without-url-dispatcher'
+
+2021-01-15 13:57:09 +0100 Mike Gabriel (2e291cb)
+
+	* debian/: Initial packaging draft.
+
+2021-01-15 15:06:55 +0100 Mike Gabriel (b462fd7)
+
+	* tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher.
+
+2021-01-15 15:12:02 +0100 Mike Gabriel (f730ff4)
+
+	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries().
+
+2021-01-15 15:15:52 +0100 Mike Gabriel (470a653)
+
+	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename.
+
+2021-01-15 15:30:26 +0100 Mike Gabriel (b6670f0)
+
+	* COPYING: Add file.
+
+2021-01-15 15:15:52 +0100 Mike Gabriel (dc7ae44)
+
+	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename.
+
+2021-01-15 15:12:02 +0100 Mike Gabriel (1d64ee4)
+
+	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries().
+
+2021-01-15 15:06:55 +0100 Mike Gabriel (b68ebfc)
+
+	* tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher.
+
+2021-01-12 12:18:03 +0100 Marius Gripsgard (3cc2c95)
+
+	* Inital commit
+
