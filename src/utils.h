@@ -39,3 +39,4 @@ gboolean is_budgie();
 gboolean execute_command(const gchar * cmd);
 gboolean open_url(const gchar * url);
 gboolean have_program(const gchar * program);
+gboolean zenity_warning(const char *icon_name, const char *title, const char *text);
