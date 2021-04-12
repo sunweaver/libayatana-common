@@ -1,6 +1,18 @@
-2021-03-30 16:05:55 +0200 Mike Gabriel
+2021-04-12 16:55:31 +0200 Mike Gabriel
 
-	* release 0.9.0 (HEAD -> master, tag: 0.9.0)
+	* release 0.9.1 (HEAD -> master, tag: 0.9.1)
+
+2021-04-12 16:54:09 +0200 Mike Gabriel (94b8cfc)
+
+	* Merge branch 'tari01-pr/add-zenity-warning'
+
+2021-04-02 22:38:21 +0200 Robert Tari (9f6064b)
+
+	* Add the Zenity warning function
+
+2021-03-30 16:05:55 +0200 Mike Gabriel (8acbd3a)
+
+	* release 0.9.0 (tag: 0.9.0)
 
 2021-03-30 15:57:06 +0200 Mike Gabriel (8b8c30f)
 
