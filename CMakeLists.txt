@@ -1,5 +1,5 @@
 project (libayatana-common C CXX)
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.13)
 
 set(PROJECT_VERSION "0.9.1")
 set(PACKAGE ${CMAKE_PROJECT_NAME})
