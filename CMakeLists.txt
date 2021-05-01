@@ -1,6 +1,10 @@
 project (libayatana-common C CXX)
 cmake_minimum_required(VERSION 3.13)
 
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    SET(CMAKE_INSTALL_PREFIX "/usr" CACHE PATH "..." FORCE)
+endif(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+
 set(PROJECT_VERSION "0.9.1")
 set(PACKAGE ${CMAKE_PROJECT_NAME})
 
@@ -8,8 +12,8 @@ set(API_VERSION 0)
 set(ABI_VERSION 0)
 
 # Options
-option (ENABLE_TESTS "Build the package's automatic tests." OFF)
-option (ENABLE_COVERAGE "Generate lcov code coverage reports." OFF)
+option(ENABLE_TESTS "Enable all tests and checks" OFF)
+option(ENABLE_COVERAGE "Enable coverage reports (includes enabling all tests and checks)" OFF)
 
 if(ENABLE_COVERAGE)
     set(ENABLE_TESTS ON)
@@ -47,6 +51,9 @@ if (ENABLE_TESTS)
     include(CTest)
     enable_testing()
     add_subdirectory(tests)
-else()
-    message(STATUS "Tests disabled")
 endif()
+
+# Display config info
+
+message(STATUS "Install prefix: ${CMAKE_INSTALL_PREFIX}")
+message(STATUS "Unit tests: ${ENABLE_TESTS}")
