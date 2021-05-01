@@ -1,4 +1,4 @@
-# libayatana-common - Common functions for Ayatana System Indicators  [![Build Status](https://travis-ci.org/AyatanaIndicators/libayatana-common.svg)](https://travis-ci.org/AyatanaIndicators/libayatana-common)
+# libayatana-common - Common functions for Ayatana System Indicators  [![Build Status](https://travis-ci.com/AyatanaIndicators/libayatana-common.svg)](https://travis-ci.com/AyatanaIndicators/libayatana-common)
 
 ## About Ayatana Indicators
 
