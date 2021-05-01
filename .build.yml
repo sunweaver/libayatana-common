@@ -3,7 +3,7 @@
 ##########################################################
 requires:
   archlinux:
-    # Useful URL: https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=ayatana-indicator-keyboard
+    # Useful URL: https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=libayatana-common
     - clang
     - gcc
     - git
@@ -13,10 +13,7 @@ requires:
     - cmake
     - cmake-extras
     - mate-common
-    - cmake
-    - intltool
     - glib2
-    - systemd
 
   debian:
     # Useful URL: https://salsa.debian.org/debian-ayatana-team/ayatana-ido
