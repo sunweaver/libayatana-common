@@ -51,6 +51,14 @@ if (ENABLE_TESTS)
     include(CTest)
     enable_testing()
     add_subdirectory(tests)
+    if (ENABLE_COVERAGE)
+        find_package(CoverageReport)
+        ENABLE_COVERAGE_REPORT(
+            TARGETS "ayatana-common"
+            TESTS "tst_utils"
+            FILTER /usr/include ${CMAKE_BINARY_DIR}/*
+        )
+    endif()
 endif()
 
 # Display config info
