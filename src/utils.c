@@ -46,7 +46,7 @@ is_xdg_current_desktop (const gchar* desktop)
 }
 
 gboolean
-is_lomiri ()
+ayatana_common_utils_is_lomiri ()
 {
   // For legacy reasons keep the MIR_SOCKET hack
   return (g_getenv ("MIR_SOCKET") != NULL ||
@@ -54,37 +54,37 @@ is_lomiri ()
 }
 
 gboolean
-is_gnome ()
+ayatana_common_utils_is_gnome ()
 {
   return is_xdg_current_desktop(DESKTOP_GNOME);
 }
 
 gboolean
-is_unity ()
+ayatana_common_utils_is_unity ()
 {
   return is_xdg_current_desktop(DESKTOP_UNITY);
 }
 
 gboolean
-is_mate ()
+ayatana_common_utils_is_mate ()
 {
   return is_xdg_current_desktop(DESKTOP_MATE);
 }
 
 gboolean
-is_xfce ()
+ayatana_common_utils_is_xfce ()
 {
   return is_xdg_current_desktop(DESKTOP_XFCE);
 }
 
 gboolean
-is_pantheon ()
+ayatana_common_utils_is_pantheon ()
 {
   return is_xdg_current_desktop(DESKTOP_PANTHEON);
 }
 
 gboolean
-is_budgie ()
+ayatana_common_utils_is_budgie ()
 {
   return is_xdg_current_desktop(DESKTOP_BUDGIE);
 }
@@ -119,7 +119,7 @@ find_browser ()
 }
 
 gboolean
-execute_command (const gchar * cmd)
+ayatana_common_utils_execute_command (const gchar * cmd)
 {
   GError * err = NULL;
 
@@ -136,11 +136,11 @@ execute_command (const gchar * cmd)
 }
 
 gboolean
-open_url (const gchar * url)
+ayatana_common_utils_open_url (const gchar * url)
 {
   char * browser = NULL;
 
-  if (is_lomiri())
+  if (ayatana_common_utils_is_lomiri())
   {
 #ifdef HAS_URLDISPATCHER
     lomiri_url_dispatch_send(url, NULL, NULL);
@@ -154,14 +154,14 @@ open_url (const gchar * url)
     browser = find_browser();
 
   if (browser != NULL)
-    return execute_command(g_strdup_printf("%s '%s'", browser, url));
+    return ayatana_common_utils_execute_command(g_strdup_printf("%s '%s'", browser, url));
   else
     return FALSE;
 
 }
 
 gboolean
-have_program (const gchar * program)
+ayatana_common_utils_have_program (const gchar * program)
 {
   gchar *path;
   gboolean have;
@@ -174,7 +174,7 @@ have_program (const gchar * program)
 }
 
 gboolean
-zenity_warning (const char * icon_name,
+ayatana_common_utils_zenity_warning (const char * icon_name,
                 const char * title,
                 const char * text)
 {

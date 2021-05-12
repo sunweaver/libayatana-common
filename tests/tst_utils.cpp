@@ -38,44 +38,44 @@ public:
 
 TEST_F(XdgCurrentDesktopUtilsTest, isLomiri)
 {
-    EXPECT_FALSE(is_lomiri());
+    EXPECT_FALSE(ayatana_common_utils_is_lomiri());
     setenv("XDG_CURRENT_DESKTOP", "Lomiri", 1);
-    EXPECT_TRUE(is_lomiri());
+    EXPECT_TRUE(ayatana_common_utils_is_lomiri());
 }
 
 TEST_F(XdgCurrentDesktopUtilsTest, isGnome)
 {
-    EXPECT_FALSE(is_gnome());
+    EXPECT_FALSE(ayatana_common_utils_is_gnome());
     setenv("XDG_CURRENT_DESKTOP", "GNOME", 1);
-    EXPECT_TRUE(is_gnome());
+    EXPECT_TRUE(ayatana_common_utils_is_gnome());
 }
 TEST_F(XdgCurrentDesktopUtilsTest, isUnity)
 {
-    EXPECT_FALSE(is_unity());
+    EXPECT_FALSE(ayatana_common_utils_is_unity());
     setenv("XDG_CURRENT_DESKTOP", "Unity", 1);
-    EXPECT_TRUE(is_unity());
+    EXPECT_TRUE(ayatana_common_utils_is_unity());
 }
 TEST_F(XdgCurrentDesktopUtilsTest, isMate)
 {
-    EXPECT_FALSE(is_mate());
+    EXPECT_FALSE(ayatana_common_utils_is_mate());
     setenv("XDG_CURRENT_DESKTOP", "MATE", 1);
-    EXPECT_TRUE(is_mate());
+    EXPECT_TRUE(ayatana_common_utils_is_mate());
 }
 TEST_F(XdgCurrentDesktopUtilsTest, isXfce)
 {
-    EXPECT_FALSE(is_xfce());
+    EXPECT_FALSE(ayatana_common_utils_is_xfce());
     setenv("XDG_CURRENT_DESKTOP", "XFCE", 1);
-    EXPECT_TRUE(is_xfce());
+    EXPECT_TRUE(ayatana_common_utils_is_xfce());
 }
 TEST_F(XdgCurrentDesktopUtilsTest, isPantheon)
 {
-    EXPECT_FALSE(is_pantheon());
+    EXPECT_FALSE(ayatana_common_utils_is_pantheon());
     setenv("XDG_CURRENT_DESKTOP", "PANTHEON", 1);
-    EXPECT_TRUE(is_pantheon());
+    EXPECT_TRUE(ayatana_common_utils_is_pantheon());
 }
 TEST_F(XdgCurrentDesktopUtilsTest, isBudgie)
 {
-    EXPECT_FALSE(is_budgie());
+    EXPECT_FALSE(ayatana_common_utils_is_budgie());
     setenv("XDG_CURRENT_DESKTOP", "Budgie:GNOME", 1);
-    EXPECT_TRUE(is_budgie());
+    EXPECT_TRUE(ayatana_common_utils_is_budgie());
 }

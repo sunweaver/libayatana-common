@@ -28,15 +28,15 @@
 #define DESKTOP_PANTHEON  "PANTHEON"
 #define DESKTOP_BUDGIE  "Budgie"
 
-gboolean is_lomiri();
-gboolean is_unity();
-gboolean is_gnome();
-gboolean is_mate();
-gboolean is_xfce();
-gboolean is_pantheon();
-gboolean is_budgie();
+gboolean ayatana_common_utils_is_lomiri();
+gboolean ayatana_common_utils_is_unity();
+gboolean ayatana_common_utils_is_gnome();
+gboolean ayatana_common_utils_is_mate();
+gboolean ayatana_common_utils_is_xfce();
+gboolean ayatana_common_utils_is_pantheon();
+gboolean ayatana_common_utils_is_budgie();
 
-gboolean execute_command(const gchar * cmd);
-gboolean open_url(const gchar * url);
-gboolean have_program(const gchar * program);
-gboolean zenity_warning(const char *icon_name, const char *title, const char *text);
+gboolean ayatana_common_utils_execute_command(const gchar * cmd);
+gboolean ayatana_common_utils_open_url(const gchar * url);
+gboolean ayatana_common_utils_have_program(const gchar * program);
+gboolean ayatana_common_utils_zenity_warning(const char *icon_name, const char *title, const char *text);
