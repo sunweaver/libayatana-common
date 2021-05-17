@@ -1,8 +1,18 @@
 # Build and installation instructions
 
+## Compile-time build dependencies
+
+ - glib-2.0 (>= 2.36)
+ - cmake (>= 3.13)
+ - cmake-extras
+ - gtest (>= 1.6.0)
+ - gcovr (>= 2.4)
+ - lcov (>= 1.9)
+
 ## For end-users and packagers
 
 ```
+cd libayatana-common-X.Y.Z
 mkdir build
 cd build
 cmake ..
@@ -12,6 +22,7 @@ sudo make install
 ## For testers - unit tests only
 
 ```
+cd libayatana-common-X.Y.Z
 mkdir build
 cd build
 cmake .. -DENABLE_TESTS=ON
@@ -21,11 +32,12 @@ make test
 ## For testers - both unit tests and code coverage
 
 ```
+cd libayatana-common-X.Y.Z
 mkdir build
 cd build
 cmake .. -DENABLE_COVERAGE=ON
 make
 make test
-make coverage
+make coverage-html
 ```
 **The install prefix defaults to `/usr`, change it with `-DCMAKE_INSTALL_PREFIX=/some/path`**
