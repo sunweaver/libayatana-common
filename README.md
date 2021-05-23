@@ -43,3 +43,7 @@ across various system indicator components.
 ## License and Copyright
 
 See COPYING and AUTHORS file in this project.
+
+## Building and Testing
+
+For instructions on building and running built-in tests, see the INSTALL.md file.
