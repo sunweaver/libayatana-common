@@ -1,149 +1,195 @@
-2021-04-12 16:55:31 +0200 Mike Gabriel
+2021-05-25 Mike Gabriel
 
-	* release 0.9.1 (HEAD -> master, tag: 0.9.1)
+        * release 0.9.2 (HEAD -> master, tag: 0.9.2)
 
-2021-04-12 16:54:09 +0200 Mike Gabriel (94b8cfc)
+2021-05-25 Robert Tari
 
-	* Merge branch 'tari01-pr/add-zenity-warning'
+        * Merge branch
+          'sunweaver-pr/provide-have-desktopenv-program-functions'
+          (43bbe9b)
 
-2021-04-02 22:38:21 +0200 Robert Tari (9f6064b)
+2021-05-25 Mike Gabriel
 
-	* Add the Zenity warning function
+        * src/utils.(ch): Add ayatana_common_utils_have_*_program() functions
+          used in session indicator. (9fc7eaa)
 
-2021-03-30 16:05:55 +0200 Mike Gabriel (8acbd3a)
+2021-05-23 Mike Gabriel
 
-	* release 0.9.0 (tag: 0.9.0)
+        * Merge branch 'tari01-pr/update-docs' (3989df8)
 
-2021-03-30 15:57:06 +0200 Mike Gabriel (8b8c30f)
+2021-05-17 Robert Tari
 
-	* Merge branch 'tari01-pr/add-budgie'
+        * Update documentation files (ffd9c2c)
 
-2021-03-22 10:47:31 +0100 Robert Tari (18179a1)
+2021-05-12 Mike Gabriel
 
-	* Add us to the copyright headers
+        * Merge branch 'tari01-pr/prefix-symbols' (622d115)
 
-2021-03-22 10:45:38 +0100 Robert Tari (cd6d7b2)
+2021-05-12 Robert Tari
 
-	* Add Budgie desktop support
+        * Prefix functions in utils with ayatana_common_utils_ (68f98ee)
 
-2021-03-22 10:43:31 +0100 Robert Tari (27d8dca)
+2021-05-11 Robert Tari
 
-	* Whitespace fix
+        * Merge branch 'sunweaver-pr/add-coverage-support' (75dd432)
 
-2021-03-30 15:55:43 +0200 Mike Gabriel (73bd95f)
+2021-05-04 Mike Gabriel
 
-	* Merge branch 'tari01-pr/fix-required-cmake-version'
+        * .travis.yml: Don't try running autotools based CI build. (ae23acc)
+        * .travis.yml: Don't try running autotools based CI build. (c55c46f)
+        * CMakeLists.txt: Add coverage report support. (fbf20bd)
 
-2021-02-08 10:23:06 +0100 Robert Tari (5bf1dcb)
+2021-05-03 Mike Gabriel
 
-	* Fix minimum required CMake version warning
+        * Prepare for next release (v0.9.2). (f8fb7f2)
 
-2021-03-30 15:52:26 +0200 Mike Gabriel (4cba471)
+2021-05-01 Mike Gabriel
 
-	* Merge branch 'revert-1-pr/no-lomiri-tests-without-url-dispatcher'
+        * README.md: Pull in CI build status icon from travis-ci.com, not
+          travis-ci.org. (00f4729)
+        * Merge branch 'tari01-pr/add-install' (e90249e)
 
-2021-02-03 14:50:34 +0100 Marius Gripsgard (bc3517b)
+2021-04-29 Robert Tari
 
-	* Revert "tests/: Don't run Lomiri related unit test, if library
-          hasn't been bu…"
+        * INSTALL.md: Add build/installation instructions (17f5d8f)
 
-2021-02-03 11:58:16 +0100 Robert Tari (e3cb90d)
+2021-05-01 Mike Gabriel
 
-	* Merge branch 'sunweaver-pr/port-to-lomiri-url-dispatcher'
+        * Merge branch 'tari01-pr/standardise-makefile' (ddaf929)
 
-2021-02-03 11:11:17 +0100 Mike Gabriel (7d1d251)
+2021-04-29 Robert Tari
 
-	* Port from URL Dispatcher to Lomiri URL Dispatcher.
+        * CMakeLists.txt: Use our standardised CMake bits (155b2f1)
+        * Merge branch 'sunweaver-pr/travis-ci' (0d153a3)
 
-2021-02-03 11:39:26 +0100 Robert Tari (e679711)
+2021-04-29 Mike Gabriel
 
-	* Merge branch 'sunweaver-pr/deb-packaging'
+        * CMakeLists.txt: Be happy with cmake 3.13 (fixes FTBFS on Debian
+          10). (298f4b3)
+        * .travis.yml: Temporarily disable CI builds on ubuntu:rolling.
+          Ubuntu's I series is not ready yet as docker container.
+          (e863413)
+        * tests/CMakeLists.txt: Build unit tests with --no-pie CXXFLAG.
+          (2484d58)
+        * README.md: Add file, show Travis CI status. (6781806)
+        * debian/rules: Explicitly enable unit tests during package build.
+          (2a3e4e9)
+        * CMakeLists.txt: Adjust test build option (DISABLE_TESTS ->
+          ENABLE_TESTS, defaulting to OFF). Add ENABLE_COVERAGE
+          build option. (82d8739)
+        * Travis CI: Initial draft for CI builds. (e29071a)
 
-2021-02-03 11:36:46 +0100 Robert Tari (e436dff)
+2021-04-12 Robert Tari
 
-	* Merge branch 'sunweaver-pr/add-copying-file'
+        * Attributes GH PR #11:
+          https://github.com/AyatanaIndicators/libayatana-common/pull/11
+          (9929648)
 
-2021-01-15 15:15:52 +0100 Mike Gabriel (0954c9d)
+2021-04-12 Mike Gabriel
 
-	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
-          .so filename.
+        * src/CMakeLists.txt: Drop PUBLIC_HEADER from set_target_properties
+          to avoid utils.h in <libdir>. (17c78ef)
+        * release 0.9.1 (e264045) (tag: 0.9.1)
+        * Merge branch 'tari01-pr/add-zenity-warning' (94b8cfc)
 
-2021-01-15 15:12:02 +0100 Mike Gabriel (d16f5df)
+2021-04-02 Robert Tari
 
-	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
-          target_link_libraries().
+        * Add the Zenity warning function (9f6064b)
 
-2021-01-15 15:06:55 +0100 Mike Gabriel (e4bbb7d)
+2021-03-30 Mike Gabriel
 
-	* tests/: Don't run Lomiri related unit test, if library hasn't been
-          built against lomiri-uri-dispatcher.
+        * release 0.9.0 (8acbd3a) (tag: 0.9.0)
+        * Merge branch 'tari01-pr/add-budgie' (8b8c30f)
 
-2021-02-03 11:33:43 +0100 Robert Tari (00d165c)
+2021-03-22 Robert Tari
 
-	* Merge branch 'sunweaver-pr/set-api-abi-version'
+        * Add us to the copyright headers (18179a1)
+        * Add Budgie desktop support (cd6d7b2)
+        * Whitespace fix (27d8dca)
 
-2021-01-15 15:12:02 +0100 Mike Gabriel (f4699d4)
+2021-03-30 Mike Gabriel
 
-	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
-          target_link_libraries().
+        * Merge branch 'tari01-pr/fix-required-cmake-version' (73bd95f)
 
-2021-01-15 15:06:55 +0100 Mike Gabriel (792fe77)
+2021-02-08 Robert Tari
 
-	* tests/: Don't run Lomiri related unit test, if library hasn't been
-          built against lomiri-uri-dispatcher.
+        * Fix minimum required CMake version warning (5bf1dcb)
 
-2021-02-03 11:30:49 +0100 Robert Tari (1756ee8)
+2021-03-30 Mike Gabriel
 
-	* Merge branch 'sunweaver-pr/gmock-must-be-in-link-libraries'
+        * Merge branch 'revert-1-pr/no-lomiri-tests-without-url-dispatcher'
+          (4cba471)
 
-2021-01-15 15:06:55 +0100 Mike Gabriel (1206219)
+2021-02-03 Marius Gripsgard
 
-	* tests/: Don't run Lomiri related unit test, if library hasn't been
-          built against lomiri-uri-dispatcher.
+        * Revert "tests/: Don't run Lomiri related unit test, if library
+          hasn't been bu…" (bc3517b)
 
-2021-02-03 11:26:28 +0100 Robert Tari (d869125)
+2021-02-03 Robert Tari
 
-	* Merge branch 'sunweaver-pr/no-lomiri-tests-without-url-dispatcher'
+        * Merge branch 'sunweaver-pr/port-to-lomiri-url-dispatcher' (e3cb90d)
 
-2021-01-15 13:57:09 +0100 Mike Gabriel (2e291cb)
+2021-02-03 Mike Gabriel
 
-	* debian/: Initial packaging draft.
+        * Port from URL Dispatcher to Lomiri URL Dispatcher. (7d1d251)
 
-2021-01-15 15:06:55 +0100 Mike Gabriel (b462fd7)
+2021-02-03 Robert Tari
 
-	* tests/: Don't run Lomiri related unit test, if library hasn't been
-          built against lomiri-uri-dispatcher.
+        * Merge branch 'sunweaver-pr/deb-packaging' (e679711)
+        * Merge branch 'sunweaver-pr/add-copying-file' (e436dff)
 
-2021-01-15 15:12:02 +0100 Mike Gabriel (f730ff4)
+2021-01-15 Mike Gabriel
 
-	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
-          target_link_libraries().
+        * Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename. (0954c9d)
+        * tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries(). (d16f5df)
+        * tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher. (e4bbb7d)
 
-2021-01-15 15:15:52 +0100 Mike Gabriel (470a653)
+2021-02-03 Robert Tari
 
-	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
-          .so filename.
+        * Merge branch 'sunweaver-pr/set-api-abi-version' (00d165c)
 
-2021-01-15 15:30:26 +0100 Mike Gabriel (b6670f0)
+2021-01-15 Mike Gabriel
 
-	* COPYING: Add file.
+        * tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries(). (f4699d4)
+        * tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher. (792fe77)
 
-2021-01-15 15:15:52 +0100 Mike Gabriel (dc7ae44)
+2021-02-03 Robert Tari
 
-	* Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
-          .so filename.
+        * Merge branch 'sunweaver-pr/gmock-must-be-in-link-libraries'
+          (1756ee8)
 
-2021-01-15 15:12:02 +0100 Mike Gabriel (1d64ee4)
+2021-01-15 Mike Gabriel
 
-	* tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
-          target_link_libraries().
+        * tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher. (1206219)
 
-2021-01-15 15:06:55 +0100 Mike Gabriel (b68ebfc)
+2021-02-03 Robert Tari
 
-	* tests/: Don't run Lomiri related unit test, if library hasn't been
-          built against lomiri-uri-dispatcher.
+        * Merge branch 'sunweaver-pr/no-lomiri-tests-without-url-dispatcher'
+          (d869125)
 
-2021-01-12 12:18:03 +0100 Marius Gripsgard (3cc2c95)
+2021-01-15 Mike Gabriel
 
-	* Inital commit
+        * debian/: Initial packaging draft. (2e291cb)
+        * tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher. (b462fd7)
+        * tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries(). (f730ff4)
+        * Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename. (470a653)
+        * COPYING: Add file. (b6670f0)
+        * Explicitly set ABI_VERSION / API_VERSION and use ABI_VERSION in the
+          .so filename. (dc7ae44)
+        * tests/CMakeLists.txt: Add GMOCK_LIBRARIES to
+          target_link_libraries(). (1d64ee4)
+        * tests/: Don't run Lomiri related unit test, if library hasn't been
+          built against lomiri-uri-dispatcher. (b68ebfc)
 
+2021-01-12 Marius Gripsgard
+
+        * Inital commit (3cc2c95)
