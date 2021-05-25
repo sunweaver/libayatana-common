@@ -36,6 +36,13 @@ gboolean ayatana_common_utils_is_xfce();
 gboolean ayatana_common_utils_is_pantheon();
 gboolean ayatana_common_utils_is_budgie();
 
+gboolean ayatana_common_utils_have_unity_program (const gchar *program);
+gboolean ayatana_common_utils_have_gnome_program (const gchar *program);
+gboolean ayatana_common_utils_have_mate_program (const gchar *program);
+gboolean ayatana_common_utils_have_xfce_program (const gchar *program);
+gboolean ayatana_common_utils_have_pantheon_program (const gchar *program);
+gboolean ayatana_common_utils_have_budgie_program (const gchar *program);
+
 gboolean ayatana_common_utils_execute_command(const gchar * cmd);
 gboolean ayatana_common_utils_open_url(const gchar * url);
 gboolean ayatana_common_utils_have_program(const gchar * program);
