@@ -89,6 +89,61 @@ ayatana_common_utils_is_budgie ()
   return is_xdg_current_desktop(DESKTOP_BUDGIE);
 }
 
+gboolean
+ayatana_common_utils_have_unity_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_unity())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+gboolean
+ayatana_common_utils_have_gnome_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_gnome())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+gboolean
+ayatana_common_utils_have_mate_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_mate())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+gboolean
+ayatana_common_utils_have_xfce_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_xfce())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+gboolean
+ayatana_common_utils_have_pantheon_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_pantheon())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+gboolean
+ayatana_common_utils_have_budgie_program (const gchar *program)
+{
+  if (!ayatana_common_utils_is_budgie())
+    return FALSE;
+
+  return ayatana_common_utils_have_program(program);
+}
+
+
 // Bit of a hacky way? should use xdg open
 char *
 find_browser ()
