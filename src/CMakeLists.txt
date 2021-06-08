@@ -24,6 +24,6 @@ set_target_properties(ayatana-common
 
 configure_file(libayatana-common.pc.in ${CMAKE_CURRENT_BINARY_DIR}/libayatana-common.pc @ONLY)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libayatana-common.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
-install(FILES ${PUBLIC_HEADERS} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ayatana/common)
-install(TARGETS ayatana-common DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libayatana-common.pc DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig)
+install(FILES ${PUBLIC_HEADERS} DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/ayatana/common)
+install(TARGETS ayatana-common DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})
