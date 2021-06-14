@@ -34,6 +34,7 @@ include (FindPkgConfig)
 
 pkg_check_modules(GLIB REQUIRED
     glib-2.0>=2.36
+    gio-2.0>=2.36
 )
 include_directories (${GLIB_INCLUDE_DIRS})
 
@@ -46,6 +47,7 @@ include_directories(${URLDISPATCHER_INCLUDE_DIRS})
 set(CC_WARNING_ARGS " -Wall -pedantic -Wextra -Wno-missing-field-initializers")
 
 add_subdirectory(src)
+add_subdirectory(data)
 
 if (ENABLE_TESTS)
     include(CTest)
