@@ -273,3 +273,29 @@ ayatana_common_utils_zenity_warning (const char * icon_name,
   g_free (zenity);
   return confirmed;
 }
+
+void ayatana_common_utils_elipsize(char *sText)
+{
+    guint nMaxLetters = 50;
+    glong nLetters = g_utf8_strlen(sText, -1);
+    GSettingsSchemaSource *pSource = g_settings_schema_source_get_default();
+
+    if (pSource != NULL)
+    {
+        GSettingsSchema *pSchema = g_settings_schema_source_lookup(pSource, "org.ayatana.common", FALSE);
+
+        if (pSchema != NULL)
+        {
+            g_settings_schema_unref(pSchema);
+            GSettings *pSettings = g_settings_new("org.ayatana.common");
+            nMaxLetters = g_settings_get_uint(pSettings, "max-menu-text-length");
+            g_object_unref(pSettings);
+        }
+    }
+
+    if (nLetters > nMaxLetters + 4)
+    {
+        gchar *pLastChar = g_utf8_offset_to_pointer(sText, nMaxLetters);
+        memcpy(pLastChar, "...\0", 4);
+    }
+}

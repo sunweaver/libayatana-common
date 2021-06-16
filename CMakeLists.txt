@@ -7,7 +7,7 @@ endif(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 
 set(PROJECT_VERSION "0.9.2")
 set(PACKAGE ${CMAKE_PROJECT_NAME})
-
+set(GETTEXT_PACKAGE "ayatana-common")
 set(API_VERSION 0)
 set(ABI_VERSION 0)
 
@@ -34,6 +34,7 @@ include (FindPkgConfig)
 
 pkg_check_modules(GLIB REQUIRED
     glib-2.0>=2.36
+    gio-2.0>=2.36
 )
 include_directories (${GLIB_INCLUDE_DIRS})
 
@@ -46,6 +47,8 @@ include_directories(${URLDISPATCHER_INCLUDE_DIRS})
 set(CC_WARNING_ARGS " -Wall -pedantic -Wextra -Wno-missing-field-initializers")
 
 add_subdirectory(src)
+add_subdirectory(data)
+add_subdirectory(po)
 
 if (ENABLE_TESTS)
     include(CTest)

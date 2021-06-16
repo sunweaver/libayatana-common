@@ -79,3 +79,55 @@ TEST_F(XdgCurrentDesktopUtilsTest, isBudgie)
     setenv("XDG_CURRENT_DESKTOP", "Budgie:GNOME", 1);
     EXPECT_TRUE(ayatana_common_utils_is_budgie());
 }
+
+class StringFunctionsTest : public ::testing::Test
+{
+public:
+
+    StringFunctionsTest()
+    {
+    }
+
+    void SetUp()
+    {
+        GSettingsSchemaSource *pSource = g_settings_schema_source_get_default();
+
+        if (pSource != NULL)
+        {
+            GSettingsSchema *pSchema = g_settings_schema_source_lookup(pSource, "org.ayatana.common", FALSE);
+
+            if (pSchema != NULL)
+            {
+                g_settings_schema_unref(pSchema);
+                this->pSettings = g_settings_new("org.ayatana.common");
+                this->nMaxLetters = g_settings_get_uint(pSettings, "max-menu-text-length");
+                g_settings_set_uint(this->pSettings, "max-menu-text-length", 50);
+            }
+        }
+    }
+
+    void TearDown()
+    {
+        if (this->pSettings != NULL)
+        {
+            g_settings_set_uint(pSettings, "max-menu-text-length", this->nMaxLetters);
+            g_object_unref(this->pSettings);
+        }
+    }
+
+private:
+
+    GSettings *pSettings;
+    guint nMaxLetters;
+};
+
+TEST_F(StringFunctionsTest, elipsize)
+{
+    gchar *sTest1 = g_strdup("öüóőúéáűšđß");
+    ayatana_common_utils_elipsize((gchar*)sTest1);
+    EXPECT_STREQ(sTest1, "öüóőúéáűšđß");
+
+    gchar *sTest2 = g_strdup("123456789012345678901234567890123456789012345öüóőúéáűšđß");
+    ayatana_common_utils_elipsize((gchar*)sTest2);
+    EXPECT_STREQ(sTest2, "123456789012345678901234567890123456789012345öüóőú...");
+}
