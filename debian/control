@@ -11,6 +11,7 @@ Build-Depends: cmake,
                liblomiri-url-dispatcher-dev | hello,
                libglib2.0-dev (>= 2.36),
                pkg-config,
+               systemd [linux-any],
 Standards-Version: 4.5.1
 Homepage: https://github.com/AyatanaIndicators/libayatana-common
 Vcs-Git: https://github.com/AyatanaIndicators/libayatana-common.git
@@ -38,3 +39,24 @@ Description: Ayatana System Indicators' common API functions (development header
  Indicators.
  .
  This package contains the development headers.
+
+Package: ayatana-indicator-common
+Architecture: all
+Depends: ${misc:Depends},
+Multi-Arch: foreign
+Breaks: ayatana-indicator-application (<< 0.8.0),
+        ayatana-indicator-datetime (<< 0.8.0),
+        ayatana-indicator-display (<< 0.8.0),
+        ayatana-indicator-keyboard (<< 0.8.0),
+        ayatana-indicator-messages (<< 0.8.0),
+        ayatana-indicator-notifications (<< 0.8.0),
+        ayatana-indicator-printers (<< 0.8.0),
+        ayatana-indicator-power (<< 2.1.0),
+        ayatana-indicator-session (<< 0.8.0),
+        ayatana-indicator-sound (<< 0.8.0),
+Description: libayatana-indicator shared files
+ The Ayatana Indicators library contains information to build indicators
+ to go into modern desktops' indicator applets.
+ .
+ This package has files needed to work with the Ayatana Indicators. This
+ includes the systemd ayatana-indicators-pre.target.
