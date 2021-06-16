@@ -3,6 +3,7 @@
 ## Compile-time build dependencies
 
  - glib-2.0 (>= 2.36)
+ - gio-2.0 (>=2.36)
  - cmake (>= 3.13)
  - cmake-extras
  - gtest (>= 1.6.0)
